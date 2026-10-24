@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-copy]').forEach(button => { button.addEventListener('click', async () => { const status = button.parentElement.querySelector('[role="status"]'); try { await navigator.clipboard.writeText(button.dataset.copy); status.textContent = '邮箱已复制'; } catch { status.textContent = '请选中邮箱文字后手动复制'; } }); });
